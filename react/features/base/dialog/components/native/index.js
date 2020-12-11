@@ -8,6 +8,8 @@ export { default as AlertDialog } from './AlertDialog';
 export { default as InputDialog } from './InputDialog';
 export { default as CustomSubmitDialog } from './CustomSubmitDialog';
 
+export { default as ConfirmDialogVSale } from './ConfirmDialogVSale';
+
 // NOTE: Some dialogs reuse the style of these base classes for consistency
 // and as we're in a /native namespace, it's safe to export the styles.
 export * from './styles';

@@ -183,6 +183,7 @@
         "cameraUnknownError": "Cannot use camera for an unknown reason.",
         "cameraUnsupportedResolutionError": "Your camera does not support required video resolution.",
         "Cancel": "Cancel",
+        "EndCallVSale": "Τερματισμός κλήσης",
         "close": "Close",
         "conferenceDisconnectMsg": "You may want to check your network connection. Reconnecting in {{seconds}} sec...",
         "conferenceDisconnectTitle": "You have been disconnected.",
@@ -303,6 +304,7 @@
         "userPassword": "user password",
         "WaitForHostMsg": "The conference <b>{{room}}</b> has not yet started. If you are the host then please authenticate. Otherwise, please wait for the host to arrive.",
         "WaitForHostMsgWOk": "The conference <b>{{room}}</b> has not yet started. If you are the host then please press Ok to authenticate. Otherwise, please wait for the host to arrive.",
+        "WaitMessageVSale": "Please hold. Soon a salesperson will be joining the call with you",
         "WaitingForHost": "Waiting for the host ...",
         "Yes": "Yes",
         "yourEntireScreen": "Your entire screen"

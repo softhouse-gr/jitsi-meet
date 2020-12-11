@@ -98,6 +98,22 @@ export const brandedDialog = {
         padding: 30
     },
 
+    terminateWaitingCallButtonVSale: {
+        backgroundColor: '#bf2025'
+    },
+
+    terminateWaitingCallButtonWrapperVSale: {
+        width: '100%',
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+
+    waitingMsgVSale: {
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+
     overlayTouchable: {
         ...StyleSheet.absoluteFillObject
     }

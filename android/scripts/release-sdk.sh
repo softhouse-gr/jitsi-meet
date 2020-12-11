@@ -4,6 +4,7 @@ set -e -u
 
 
 THIS_DIR=$(cd -P "$(dirname "$(readlink "${BASH_SOURCE[0]}" || echo "${BASH_SOURCE[0]}")")" && pwd)
+echo ${THIS_DIR}
 DEFAULT_MVN_REPO="${THIS_DIR}/../../../jitsi-maven-repository/releases"
 THE_MVN_REPO=${MVN_REPO:-${1:-$DEFAULT_MVN_REPO}}
 MVN_HTTP=0
@@ -89,8 +90,8 @@ fi
 # Now build and publish the Jitsi Meet SDK and its dependencies
 echo "Building and publishing the Jitsi Meet SDK"
 pushd ${THIS_DIR}/../
-./gradlew clean 
-./gradlew assembleRelease 
+./gradlew clean
+./gradlew assembleRelease
 ./gradlew publish
 popd
 
