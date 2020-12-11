@@ -91,7 +91,7 @@ class ConfirmDialogVSale extends BaseSubmitDialogVSale<Props, *> {
                     Παρακαλώ περιμένετε. Σύντομα θα συνδεθεί η/ο υπάλληλος του καταστήματος.
                 </Text>
                 <Text style = { _dialogStyles.text }>
-                    Please hold. Soon a salesperson will be joining the call with you
+                    Please wait. Soon a salesperson will be joining the call with you.
                 </Text>
             </View>
         );
