@@ -2,6 +2,24 @@
   "name": "jitsi-meet",
   "version": "0.0.0",
   "description": "A sample app for the Jitsi Videobridge",
+  "scripts": {
+    "lint": "eslint . && flow",
+    "postinstall": "jetify",
+    "validate": "npm ls",
+    "build-android": "./android/scripts/release-sdk.sh ./repo",
+    "build-ios-script": "xcodebuild -workspace ios/jitsi-meet.xcworkspace -scheme JitsiMeet -destination='generic/platform=iOS' -configuration Release archive",
+    "clean-ios": "xcodebuild clean -workspace ios/jitsi-meet.xcworkspace -scheme JitsiMeet",
+    "build-ios-dev": "npm run clean-ios && xcodebuild archive -workspace ios/jitsi-meet.xcworkspace -scheme JitsiMeet -configuration Release -sdk iphonesimulator -destination='generic/platform=iOS Simulator' -archivePath ios/sdk/out/ios-simulator VALID_ARCHS=x86_64 ENABLE_BITCODE=NO BUILD_LIBRARY_FOR_DISTRIBUTION=YES",
+    "build-ios-prod": "npm run clean-ios && xcodebuild archive -workspace ios/jitsi-meet.xcworkspace -scheme JitsiMeet -configuration Release -sdk iphoneos -destination='generic/platform=iOS' -archivePath ios/sdk/out/ios-device VALID_ARCHS=arm64 ENABLE_BITCODE=NO BUILD_LIBRARY_FOR_DISTRIBUTION=YES"
+  },
+  "engines": {
+    "node": ">=8.0.0",
+    "npm": ">=6.0.0"
+  },
+  "license": "Apache-2.0",
+  "browser": {
+    "jQuery-Impromptu": "jQuery-Impromptu/src/jquery-impromptu.js"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/jitsi/jitsi-meet"
@@ -139,18 +157,5 @@
     "webpack-bundle-analyzer": "3.4.1",
     "webpack-cli": "3.3.11",
     "webpack-dev-server": "3.11.0"
-  },
-  "engines": {
-    "node": ">=8.0.0",
-    "npm": ">=6.0.0"
-  },
-  "license": "Apache-2.0",
-  "scripts": {
-    "lint": "eslint . && flow",
-    "postinstall": "jetify",
-    "validate": "npm ls"
-  },
-  "browser": {
-    "jQuery-Impromptu": "jQuery-Impromptu/src/jquery-impromptu.js"
   }
 }
