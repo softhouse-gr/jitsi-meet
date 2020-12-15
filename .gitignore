@@ -92,3 +92,5 @@ twa/*.apk
 twa/*.aab
 twa/assetlinks.json
 
+# Exclude pod build for iOS
+!/jitsi-meet-ios-sdk-releases/final/*
